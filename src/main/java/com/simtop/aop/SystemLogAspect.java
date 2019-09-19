@@ -45,6 +45,10 @@ public class SystemLogAspect {
     /**
      * 对使用@SystemLog注释的方法进行拦截
      */
+
+    public SystemLogAspect(){
+
+    }
     @Pointcut("@annotation(com.simtop.annotation.SystemLog)")
     public void systemLogAspectCtrl() {
     }
@@ -54,6 +58,7 @@ public class SystemLogAspect {
      */
     @Before("systemLogAspectCtrl()")
     public void doBefore(JoinPoint joinPoint) throws InterruptedException {
+        System.out.println("进入controller之前被拦截");
         Date beginTime = new Date();
         BEGIN_TIME_THREAD_LOCAL.set(beginTime);
         if (logger.isDebugEnabled()) {
