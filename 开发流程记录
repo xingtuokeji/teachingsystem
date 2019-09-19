@@ -1,0 +1,5 @@
+# 2019年9月19日15:38:14
+1、项目结构创建
+2、上传至github（初始化）
+3、数据库表结构设计
+4、mybatis generator maven插件自动生成entity、dao、mapper.xml文件

@@ -28,4 +28,11 @@
         <property name="maxInMemorySize" value="10000000"/>
     </bean>
 
+    <!--配置线程池-->
+    <bean id="taskExecutor" class="org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor">
+        <property name="corePoolSize" value="5"/>
+        <property name="maxPoolSize" value="10"/>
+        <property name="waitForTasksToCompleteOnShutdown" value="true"/>
+    </bean>
+
 </beans>
